@@ -90,7 +90,7 @@ function App() {
 
     const currentYear = new Date().getFullYear();
     const numOfDays = getNumberOfDays(formData.year, formData.month);
-    const currentDay = new Date().getDate();
+    // const currentDay = new Date().getDate();
 
     switch (name) {
       case 'day': 
@@ -98,7 +98,7 @@ function App() {
           setDayError('This field is required');
           return false;
         }
-        if (value < 1 || value > numOfDays || value > currentDay) {
+        if (value < 1 || value > numOfDays ) {
           setDayError('Must be a valid day');
           return false;
         }
